@@ -69,15 +69,15 @@ document.getElementById("bakers").innerHTML = "Bakers (" + bakers + ")" + bakerc
 
 function clickinggloves() {
 
-if (cookies >= 50 + (gloves *2)) {
+if (cookies >= 50 + (gloves *5)) {
 
-cookies -= 50 + (gloves *2);
+cookies -= 50 + (gloves *5);
 
 gloves += 1;
 
 clicker +=1;
 
-glovescost = 50 + (clicker *2);
+glovescost = 50 + (clicker *5);
 
 document.getElementById("cookies").innerHTML = cookies;
 
@@ -113,7 +113,7 @@ if (cookies >= 10000 + (superbakers * 2000)) {
 
 cookies -= 10000 + (superbakers * 2000);
 
-cps += 20;
+cps += 500;
 
 superbakers += 1;
 
