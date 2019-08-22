@@ -1,6 +1,113 @@
-<!DOCTYPE>
-<html>
-	      <head><link rel="stylesheet" href="style.css"></head>
-	      <body><img src="PerfectCookie.png" id="PerfectCookie"></body>
-        <script src="main.js"></script>
-</html>
+<button onclick="clickme()">Cookie</button>
+
+<p id="cookies"></p><br><br>
+
+<div>
+
+<button onclick="baker()"><p id="bakers"> </p></button><button onclick="godlybaker()"> <p id="godlybakers"> </button>
+
+</div><br><br>
+
+<div>
+
+<button onclick="clickinggloves();"> <p id="clickinggloves2"> </button>
+
+</div>
+
+<script>
+
+cookies = 0;
+
+cps = 0;
+
+bakers = 0;
+
+godlybakers = 0;
+
+clicker = 1;
+
+gloves = 0;
+
+document.getElementById("bakers").innerHTML = "Bakers (0) 15 cookies";
+
+document.getElementById("godlybakers").innerHTML = "GodlyBakers (0) 250 cookies";
+
+document.getElementById("clickinggloves2").innerHTML = "Clicking Gloves (0) 50 cookies";
+
+function clickme() {
+
+cookies += clicker;
+
+document.getElementById("cookies").innerHTML = cookies;
+
+}
+
+function baker() {
+
+if (cookies >= 15 + bakers) {
+
+cookies -= 15 + bakers;
+
+cps += 1;
+
+bakers +=1;
+
+bakercost = 15 + bakers;
+
+document.getElementById("cookies").innerHTML = cookies;
+
+document.getElementById("bakers").innerHTML = "Bakers (" + bakers + ")" + bakercost + " cookies";
+
+}
+
+}
+
+function clickinggloves() {
+
+if (cookies >= 50 + (gloves *2)) {
+
+cookies -= 50 + (gloves *2);
+
+gloves += 1;
+
+clicker +=1;
+
+glovescost = 50 + (clicker *2);
+
+document.getElementById("cookies").innerHTML = cookies;
+
+document.getElementById("clickinggloves2").innerHTML = "Clicking Gloves (" + gloves + ")" + glovescost + " cookies";
+
+}
+
+}
+
+function godlybaker() {
+
+if (cookies >= 250 + (godlybakers * 7)) {
+
+cookies -= 250 + (godlybakers * 7);
+
+cps += 5;
+
+godlybakers += 1;
+
+gbakercost = 250 + (godlybakers * 7);
+
+document.getElementById("cookies").innerHTML = cookies;
+
+document.getElementById("godlybakers").innerHTML = "GodlyBakers (" + godlybakers + ")" + gbakercost +" cookies";
+
+}
+
+}
+
+setInterval(function(){
+
+cookies += cps;
+
+document.getElementById("cookies").innerHTML = cookies;
+
+},1000);
+
+</script>
