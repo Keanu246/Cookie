@@ -49,15 +49,15 @@ document.getElementById("cookies").innerHTML = cookies;
 
 function baker() {
 
-if (cookies >= 15 + bakers * 5) {
+if (cookies >= 15 + (bakers * 5)) {
 
-cookies -= 15 + bakers * 5;
+cookies -= 15 + (bakers * 5);
 
 cps += 1;
 
 bakers +=1;
 
-bakercost = 15 + bakers * 5;
+bakercost = 15 + (bakers * 5);
 
 document.getElementById("cookies").innerHTML = cookies;
 
