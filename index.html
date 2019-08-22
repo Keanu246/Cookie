@@ -89,15 +89,15 @@ document.getElementById("clickinggloves2").innerHTML = "Clicking Gloves (" + glo
 
 function improvedbaker() {
 
-if (cookies >= 250 + (improvedbakers * 20)) {
+if (cookies >= 250 + (improvedbakers * 25%)) {
 
-cookies -= 250 + (improvedbakers * 20);
+cookies -= 250 + (improvedbakers * 25%);
 
 cps += 15;
 
 improvedbakers += 1;
 
-ibakercost = 250 + (improvedbakers * 20);
+ibakercost = 250 + (improvedbakers * 1.25);
 
 document.getElementById("cookies").innerHTML = cookies;
 
