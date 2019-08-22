@@ -49,15 +49,15 @@ document.getElementById("cookies").innerHTML = cookies;
 
 function baker() {
 
-if (cookies >= 15 + bakers) {
+if (cookies >= 15 + bakers * 5) {
 
-cookies -= 15 + bakers;
+cookies -= 15 + bakers * 5;
 
 cps += 1;
 
 bakers +=1;
 
-bakercost = 15 + bakers;
+bakercost = 15 + bakers * 5;
 
 document.getElementById("cookies").innerHTML = cookies;
 
@@ -89,19 +89,39 @@ document.getElementById("clickinggloves2").innerHTML = "Clicking Gloves (" + glo
 
 function improvedbaker() {
 
-if (cookies >= 250 + (improvedbakers * 25%)) {
+if (cookies >= 250 + (improvedbakers * 50)) {
 
-cookies -= 250 + (improvedbakers * 25%);
+cookies -= 250 + (improvedbakers * 50);
 
-cps += 15;
+cps += 20;
 
 improvedbakers += 1;
 
-ibakercost = 250 + (improvedbakers * 1.25);
+ibakercost = 250 + (improvedbakers * 50);
 
 document.getElementById("cookies").innerHTML = cookies;
 
 document.getElementById("improvedbakers").innerHTML = "ImprovedBakers (" + improvedbakers + ")" + ibakercost +" cookies";
+
+}
+
+}
+  
+function superbaker() {
+
+if (cookies >= 10000 + (superbakers * 2000)) {
+
+cookies -= 10000 + (superbakers * 2000);
+
+cps += 20;
+
+superbakers += 1;
+
+sbakercost = 10000 + (superbakers * 2000);
+
+document.getElementById("cookies").innerHTML = cookies;
+
+document.getElementById("superbakers").innerHTML = "SuperBakers (" + superbakers + ")" + sbakercost +" cookies";
 
 }
 
