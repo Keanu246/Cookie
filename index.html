@@ -5,7 +5,7 @@
 
 <div>
 
-<button onclick="baker()"><p id="bakers"> </p></button><button onclick="improvedbaker()"> <p id="improvedbakers"> </p></button><button onclick="superbaker()"> <p id="superbakers"> </p></button><button onclick="empoweredbaker()"> <p id="empoweredbakers"> </p></button>
+<button onclick="baker()"><p id="bakers"> </p></button><button onclick="improvedbaker()"> <p id="improvedbakers"> </p></button><button onclick="superbaker()"> <p id="superbakers"> </p></button>
 
 </div><br><br>
 
@@ -124,26 +124,6 @@ sbakercost = 10000 + (superbakers * 2000);
 document.getElementById("cookies").innerHTML = cookies;
 
 document.getElementById("superbakers").innerHTML = "SuperBakers (" + superbakers + ")" + sbakercost +" cookies";
-
-}
-
-}
-  
-function empoweredbaker() {
-
-if (cookies >= 300000 + (empoweredbakers * 25000)) {
-
-cookies -= 300000 + (empoweredbakers * 25000);
-
-cps += 7500;
-
-empoweredbakers += 1;
-
-epbakercost = 300000 + (empoweredbakers * 25000);
-
-document.getElementById("cookies").innerHTML = cookies;
-
-document.getElementById("empoweredbakers").innerHTML = "EmPoweredBakers (" + empoweredbakers + ")" + epbakercost +" cookies";
 
 }
 
